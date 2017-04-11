@@ -17,10 +17,18 @@
 		"newStoreImports": [],
 		"newStoreAttrs": [],
 		"newStoreReducers": [],
-		"routerImports": [],
-		"expressRouters": [],
-		"socketImports": [],
-		"socketRegisters": [],
+		"routerImports": [
+			"import {feedingRoutes} from './mongo-db/api/feeding/feeding.router';"
+		],
+		"expressRouters": [
+			"app.use('/api/feedings', feedingRoutes);"
+		],
+		"socketImports": [
+			"import {feedingRegister} from './mongo-db/api/feeding/feeding.socket';"
+		],
+		"socketRegisters": [
+			"feedingRegister(socket);"
+		],
 		"apptype": "starter-app",
 		"appname": "BABYtracker",
 		"appdescription": "Track your baby's progress",

@@ -4,6 +4,7 @@
 import config from '../config';
 
 // Socket imports go here
+import { feedingRegister } from './mongo-db/api/feeding/feeding.socket';
 
 // When the user disconnects.. perform this
 function onDisconnect(socket) {}
@@ -16,6 +17,7 @@ function onConnect(socket) {
 	});
 
 	// Insert sockets below
+	feedingRegister(socket);
 
 }
 
