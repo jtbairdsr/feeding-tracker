@@ -1,0 +1,38 @@
+{
+	"generator-goatstack": {
+		"modules": [
+			"core",
+			"home",
+			"user-profile",
+			"404",
+			"shared"
+		],
+		"subModules": {
+			"404": [],
+			"core": [],
+			"home": [],
+			"user-profile": [],
+			"shared": []
+		},
+		"newStoreImports": [],
+		"newStoreAttrs": [],
+		"newStoreReducers": [],
+		"routerImports": [],
+		"expressRouters": [],
+		"socketImports": [],
+		"socketRegisters": [],
+		"apptype": "starter-app",
+		"appname": "BABYtracker",
+		"appdescription": "Track your baby's progress",
+		"appkeywords": "baby, feeding, tracker, diaper, progress",
+		"protocol": false,
+		"analytics": "",
+		"defaultDb": "mongo-db",
+		"dbFolders": [
+			"mongo-db"
+		],
+		"databases": [
+			"MongoDB"
+		]
+	}
+}
