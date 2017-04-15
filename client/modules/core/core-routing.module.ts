@@ -20,6 +20,11 @@ export const routes: Routes = [
 		redirectTo: '/feeding',
 		pathMatch: 'full'
 	},
+	{
+		path: 'feeding/timer/:feedingId',
+		redirectTo: '/feeding/timer/:feedingId',
+		pathMatch: 'full'
+	},
 	// Not Found Path -------------------------------------------------------------
 	{
 		path: '**',
