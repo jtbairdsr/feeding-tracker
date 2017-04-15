@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/jtbairdsr/feeding-tracker.png?label=ready&title=Ready)](https://waffle.io/jtbairdsr/feeding-tracker)
 # Check out the [Demo App](http://www.goatstack.com/)!
 
 ![build](https://circleci.com/gh/JCThomas4214/GOAT-stack/tree/master.svg?style=shield)
