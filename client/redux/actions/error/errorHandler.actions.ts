@@ -1,19 +1,10 @@
-import {
-	Injectable,
-	ElementRef
-} from '@angular/core';
-import {
-	NgRedux
-} from '@angular-redux/store';
-import {
-	IAppState
-} from '../../store/index';
+import { Injectable, ElementRef } from '@angular/core';
+import { NgRedux }                from '@angular-redux/store';
+import { IAppState }              from '../../store/index';
 
 // declare global variables to hook onto gsap library
-declare
-let TweenMax: any;
-declare
-let TimelineMax: any;
+declare let TweenMax: any;
+declare let TimelineMax: any;
 
 /////////////////////////////////////////////////////////
 /* ErrorHandler Actions: Used to call dispatches to change

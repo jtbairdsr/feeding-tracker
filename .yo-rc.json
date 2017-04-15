@@ -1,46 +1,48 @@
 {
-	"generator-goatstack": {
-		"modules": [
-			"core",
-			"home",
-			"user-profile",
-			"404",
-			"shared"
-		],
-		"subModules": {
-			"404": [],
-			"core": [],
-			"home": [],
-			"user-profile": [],
-			"shared": []
-		},
-		"newStoreImports": [],
-		"newStoreAttrs": [],
-		"newStoreReducers": [],
-		"routerImports": [
-			"import {feedingRoutes} from './mongo-db/api/feeding/feeding.router';"
-		],
-		"expressRouters": [
-			"app.use('/api/feedings', feedingRoutes);"
-		],
-		"socketImports": [
-			"import {feedingRegister} from './mongo-db/api/feeding/feeding.socket';"
-		],
-		"socketRegisters": [
-			"feedingRegister(socket);"
-		],
-		"apptype": "starter-app",
-		"appname": "BABYtracker",
-		"appdescription": "Track your baby's progress",
-		"appkeywords": "baby, feeding, tracker, diaper, progress",
-		"protocol": false,
-		"analytics": "",
-		"defaultDb": "mongo-db",
-		"dbFolders": [
-			"mongo-db"
-		],
-		"databases": [
-			"MongoDB"
-		]
-	}
+  "generator-goatstack": {
+    "modules": [
+      "core",
+      "home",
+      "user-profile",
+      "404",
+      "shared",
+      "feeding"
+    ],
+    "subModules": {
+      "404": [],
+      "core": [],
+      "home": [],
+      "user-profile": [],
+      "shared": [],
+      "feeding": []
+    },
+    "newStoreImports": [],
+    "newStoreAttrs": [],
+    "newStoreReducers": [],
+    "routerImports": [
+      "import {feedingRoutes} from './mongo-db/api/feeding/feeding.router';"
+    ],
+    "expressRouters": [
+      "app.use('/api/feedings', feedingRoutes);"
+    ],
+    "socketImports": [
+      "import {feedingRegister} from './mongo-db/api/feeding/feeding.socket';"
+    ],
+    "socketRegisters": [
+      "feedingRegister(socket);"
+    ],
+    "apptype": "starter-app",
+    "appname": "BABYtracker",
+    "appdescription": "Track your baby's progress",
+    "appkeywords": "baby, feeding, tracker, diaper, progress",
+    "protocol": false,
+    "analytics": "",
+    "defaultDb": "mongo-db",
+    "dbFolders": [
+      "mongo-db"
+    ],
+    "databases": [
+      "MongoDB"
+    ]
+  }
 }

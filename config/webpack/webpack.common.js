@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var nodeExternals = require('webpack-node-externals');
+var path = require('path');
 
 var helpers = require('../helpers');
 
@@ -56,7 +57,10 @@ module.exports = function (options) {
 		},
 
 		resolve: {
-			extensions: ['.ts', '.js', '.scss']
+			extensions: ['.ts', '.js', '.scss'],
+			alias: {
+				Styles: path.resolve(__dirname, '../../client/styles')
+			}
 		},
 
 		plugins: [

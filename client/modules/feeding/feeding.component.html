@@ -1,0 +1,6 @@
+<h1>{{feeding.goalVolume}} mL</h1>
+<div>
+	<md-checkbox [(ngModel)]="thickening">Thickening</md-checkbox>
+	<button class="primary-button" (click)="startFeeding('oral')" [disabled]="!thickening" md-raised-button color="primary">Start Oral</button>
+	<button class="primary-button" (click)="startFeeding('gavage')" md-raised-button color="primary">Start Gavage</button>
+</div>
