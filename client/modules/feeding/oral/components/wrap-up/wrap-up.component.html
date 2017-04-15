@@ -1,13 +1,10 @@
-<!-- <md-input-container>
-	<input mdInput placeholder="Volume Consumed (mL)" type="number" [(ngModel)]="feeding.oral.volume">
-</md-input-container> -->
 <md-select placeholder="Volume Consumed (mL)" [(ngModel)]="feeding.oral.volume">
 	<md-option *ngFor="let ml of mls" [value]="ml.value">
 		{{ml.label}}
 	</md-option>
 </md-select>
 <!-- TODO: add needed if haven't had iron yet today and disable if we have administered-->
-<md-checkbox [(ngModel)]="feeding.iron" [disabled]="!ironNeeded" [ngClass]="{administered: !ironNeeded}">Iron
+<md-checkbox [(ngModel)]="feeding.iron" [disabled]="!ironNeeded" [ngClass]="{administered: !ironNeeded}">Iron (1 mL)
 	<span class="iron-hint"> - {{ironNeeded ? 'needed' : 'administered'}}</span>
 </md-checkbox>
 <div>

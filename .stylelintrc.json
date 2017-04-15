@@ -3,7 +3,7 @@
 	"rules": {
 		"indentation": ["tab"],
 		"selector-type-no-unknown": [true, {
-			"ignoreTypes": ["/^md-/", "/\/deep\//", "signature"]
+			"ignoreTypes": ["/^md-/", "/\/deep\//", "signature", "/^the-/"]
 		}],
 		"number-leading-zero": "never"
 	}

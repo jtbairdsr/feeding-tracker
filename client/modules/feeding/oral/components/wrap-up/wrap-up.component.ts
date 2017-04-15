@@ -1,30 +1,25 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'oral-wrap-up',
 	templateUrl: 'wrap-up.component.html',
 	styleUrls: ['wrap-up.component.css'],
-	// changeDetection: ChangeDetectionStrategy.OnPush
 })
-
-// Change detection default will wastefully check if each component in the component tree has changed.
-// It is better to inform the change detection service manually
-
 export class WrapUpComponent implements OnInit {
 	// TODO: consume a feeding interface
 	public feeding: any;
 	public ironNeeded: boolean;
 	public mls: any[];
 
-	constructor(
-		// private ref: ChangeDetectorRef
-	) { }
+	constructor(private router: Router) { }
 
 	ngOnInit() {
+		// TODO: get feeding from the server based on the id in the url
 		this.feeding = {
+			_id: 'update-this-with-the-feeding-id',
 			iron: false,
 			thickening: true,
-			// TODO: get feeding goalVolume from settings
 			goalVolume: 62,
 			oral: {
 				startTime: new Date(),
@@ -36,10 +31,10 @@ export class WrapUpComponent implements OnInit {
 		}
 		this.mls = [];
 		for (let i = this.feeding.goalVolume; i > 0; i--) {
-			this.mls.push({ value: i, label: `${i} mL${i > 1 ? 's' : ''}` });
+			this.mls.push({ value: i, label: `${i} mL` });
 		}
 		// TODO: this needs to be queried from the server (if no feeding has included iron today, then it is needed)
-		// this.ironNeeded = true;
+		this.ironNeeded = true;
 	}
 
 	private finish(): void {
@@ -52,5 +47,9 @@ export class WrapUpComponent implements OnInit {
 
 	private done(): void {
 
+	}
+
+	public addPrunes(): void {
+		this.router.navigate([`/feeding/oral/${this.feeding._id}/prunes`])
 	}
 }
