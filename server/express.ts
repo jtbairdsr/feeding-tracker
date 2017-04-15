@@ -32,7 +32,7 @@ function expressInit(app) {
 	app.use(passport.initialize());
 
 	//initialize morgan express logger
-	// NOTE: all node and custom module requests
+	// NOTE:0 all node and custom module requests id:1
 	if (process.env.NODE_ENV !== 'test') {
 		app.use(morgan('dev', {
 			skip: function (req, res) {

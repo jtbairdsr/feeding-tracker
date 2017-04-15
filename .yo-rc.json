@@ -14,7 +14,9 @@
       "home": [],
       "user-profile": [],
       "shared": [],
-      "feeding": []
+      "feeding": [
+        "oral"
+      ]
     },
     "newStoreImports": [],
     "newStoreAttrs": [],

@@ -5,11 +5,11 @@ import * as moment    from 'moment';
 import { Router }     from '@angular/router';
 
 @Component({
-	selector: 'timer',
-	templateUrl: 'timer.component.html',
-	styleUrls: ['timer.component.css']
+	selector: 'oral',
+	templateUrl: 'oral.component.html',
+	styleUrls: ['oral.component.css']
 })
-export class TimerComponent implements OnInit {
+export class OralComponent implements OnInit {
 	public feeding: any;
 	public timer: Observable<string>;
 
@@ -21,15 +21,16 @@ export class TimerComponent implements OnInit {
 	ngOnInit() {
 		// TODO: use the feeding id on the URL to get the correct feeding from the server
 		this.feeding = {
-			timer: {
+			oral: {
 				startTime: moment()
 			}
 		}
-		this.timer = Observable.zip(Observable.interval(1000), () => moment.utc(moment().diff(this.feeding.timer.startTime)).format("HH:mm:ss"));
+		this.timer = Observable.zip(Observable.interval(1000), () => moment.utc(moment().diff(this.feeding.oral.startTime)).format("HH:mm:ss"));
 	}
 
 	public stopFeeding(): void {
 		// TODO: add an endTime to the feeding.oral and save to the server.
-		this.router.navigate(['/feeding/oral-finish/', 'update-this-with-the-feeding-id']);
+		let feedingId = 'update-this-with-the-feeding-id';
+		this.router.navigate([`/feeding/oral/${feedingId}/wrap-up`]);
 	}
 }

@@ -30,10 +30,11 @@ Modules
 --------------------------------------------------
 ** other necessary modules for this app
 */
-import { NgModule }       from '@angular/core';
-import { BrowserModule }  from '@angular/platform-browser';
-import { MaterialModule } from '@angular/material';
-import { ReduxModule }    from '../redux/redux.module';
+import { NgModule }                from '@angular/core';
+import { BrowserModule }           from '@angular/platform-browser';
+import { MaterialModule }          from '@angular/material';
+import { ReduxModule }             from '../redux/redux.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CoreModule }        from './core/core.module';
 import { HomeModule }        from './home/home.module';
@@ -54,6 +55,7 @@ NgModule
 	imports: [
 		BrowserModule,
 		ReduxModule,
+		BrowserAnimationsModule,
 		CoreModule,
 		HomeModule,
 		UserProfileModule,

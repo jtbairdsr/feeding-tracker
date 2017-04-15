@@ -20,9 +20,15 @@ export const routes: Routes = [
 		redirectTo: '/feeding',
 		pathMatch: 'full'
 	},
+	// Feeding-Oral Paths --------------------------------------------------------------
 	{
-		path: 'feeding/timer/:feedingId',
-		redirectTo: '/feeding/timer/:feedingId',
+		path: 'feeding/oral/:feedingId',
+		redirectTo: '/feeding/oral/:feedingId',
+		pathMatch: 'full'
+	},
+	{
+		path: 'feeding/oral/:feedingId/wrap-up',
+		redirectTo: '/feeding/oral/:feedingId/wrap-up',
 		pathMatch: 'full'
 	},
 	// Not Found Path -------------------------------------------------------------

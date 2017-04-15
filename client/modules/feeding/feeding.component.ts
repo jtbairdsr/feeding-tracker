@@ -50,7 +50,7 @@ export class FeedingComponent implements OnInit {
 		// TODO: write feeding to database and append it's id to the timer url
 		switch (type) {
 			case 'oral':
-				this.router.navigate(['/feeding/timer', 'update-this-with-the-feeding-id'])
+				this.router.navigate(['/feeding/oral', 'update-this-with-the-feeding-id'])
 				break;
 			case 'gavage':
 				this.router.navigate(['/feeding/gavage-start', 'update-this-with-the-feeding-id'])
