@@ -30,31 +30,16 @@ Modules
 --------------------------------------------------
 ** other necessary modules for this app
 */
-import {
-	NgModule
-} from '@angular/core';
-import {
-	BrowserModule
-} from '@angular/platform-browser';
-import {
-	MaterialModule
-} from '@angular/material';
-import {
-	ReduxModule
-} from '../redux/redux.module';
+import { NgModule }       from '@angular/core';
+import { BrowserModule }  from '@angular/platform-browser';
+import { MaterialModule } from '@angular/material';
+import { ReduxModule }    from '../redux/redux.module';
 
-import {
-	CoreModule
-} from './core/core.module';
-import {
-	HomeModule
-} from './home/home.module';
-import {
-	UserProfileModule
-} from './user-profile/user-profile.module';
-import {
-	Four0FourModule
-} from './404/404.module';
+import { CoreModule }        from './core/core.module';
+import { HomeModule }        from './home/home.module';
+import { UserProfileModule } from './user-profile/user-profile.module';
+import { FeedingModule }     from './feeding/feeding.module';
+import { Four0FourModule }   from './404/404.module';
 
 /*
 --------------------------------------------------
@@ -72,6 +57,7 @@ NgModule
 		CoreModule,
 		HomeModule,
 		UserProfileModule,
+		FeedingModule,
 		Four0FourModule,
 		MaterialModule.forRoot()
 	],

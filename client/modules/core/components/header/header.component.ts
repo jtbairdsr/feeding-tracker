@@ -1,33 +1,13 @@
-import {
-	Component,
-	OnInit,
-	AfterViewInit,
-	ViewChild,
-	ElementRef,
-	HostListener,
-	ChangeDetectionStrategy,
-	ChangeDetectorRef
-} from '@angular/core';
-import {
-	select
-} from '@angular-redux/store';
-import {
-	Observable
-} from 'rxjs/Observable';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, HostListener, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 
-import {
-	UserActions
-} from '../../../../redux/actions/user/user.actions';
-import {
-	UserFormActions
-} from '../../../../redux/actions/userForm/userForm.actions';
+import { select }          from '@angular-redux/store';
+import { Observable }      from 'rxjs/Observable';
+import { UserActions }     from '../../../../redux/actions/user/user.actions';
+import { UserFormActions } from '../../../../redux/actions/userForm/userForm.actions';
 
-declare
-let TweenMax: any;
-declare
-let TimelineMax: any;
-declare
-let Power0: any;
+declare let TweenMax: any;
+declare let TimelineMax: any;
+declare let Power0: any;
 
 @Component({
 	selector: 'header-section',

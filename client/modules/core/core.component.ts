@@ -1,38 +1,14 @@
-import {
-	Component,
-	ViewChild,
-	AfterViewInit,
-	ElementRef,
-	HostListener,
-	ChangeDetectionStrategy,
-	ChangeDetectorRef
-} from '@angular/core';
-import {
-	NgRedux,
-	select
-} from '@angular-redux/store';
-import {
-	ErrorHandlerActions
-} from '../../redux/actions/error/errorHandler.actions';
-import {
-	UserFormActions
-} from '../../redux/actions/userForm/userForm.actions';
-import {
-	UserActions
-} from '../../redux/actions/user/user.actions';
-import {
-	SEOActions
-} from '../../redux/actions/seo/seo.actions';
-import {
-	Observable
-} from 'rxjs/Observable';
+import { Component, ViewChild, AfterViewInit, ElementRef, HostListener, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { NgRedux, select }     from '@angular-redux/store';
+import { ErrorHandlerActions } from '../../redux/actions/error/errorHandler.actions';
+import { UserFormActions }     from '../../redux/actions/userForm/userForm.actions';
+import { UserActions }         from '../../redux/actions/user/user.actions';
+import { SEOActions }          from '../../redux/actions/seo/seo.actions';
+import { Observable }          from 'rxjs/Observable';
 
-declare
-let TweenMax: any;
-declare
-let TimelineMax: any;
-declare
-let Power0: any;
+declare let TweenMax: any;
+declare let TimelineMax: any;
+declare let Power0: any;
 
 @Component({
 	selector: 'core-section',

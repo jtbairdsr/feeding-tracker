@@ -1,0 +1,96 @@
+// Helper mixin for positioning
+// ---
+// @param [string] $position: position
+// @param [list] $args (()): offsets list
+// ---
+
+@mixin position($position, $args: ()) {
+  $offsets: top right bottom left;
+  position: $position;
+  @if length($args) == 1 {
+    bottom: nth($args, 1);
+    left: nth($args, 1);
+    right: nth($args, 1);
+    top: nth($args, 1);
+  } @else if length($args == 2) {
+    bottom: nth($args, 1);
+    left: nth($args, 2);
+    right: nth($args, 2);
+    top: nth($args, 1);
+  } @else if length($args == 3) {
+    bottom: nth($args, 3);
+    left: nth($args, 2);
+    right: nth($args, 2);
+    top: nth($args, 1);
+  } @else {
+    bottom: nth($args, 3);
+    left: nth($args, 4);
+    right: nth($args, 2);
+    top: nth($args, 1);
+  }
+}
+
+// Helper mixin for offset positioning
+// ---
+// @param [string] $position: position
+// @param [list] $args (()): offsets list
+// ---
+
+@mixin offset($position, $args: ()) {
+  $offsets: top right bottom left;
+  position: $position;
+
+  @each $offset in $offsets {
+    $index: index($args, $offset);
+
+    @if $index {
+      @if $index == length($args) {
+        #{$offset}: 0;
+      } @else {
+        $next: nth($args, $index + 1);
+        @if is-valid-length($next) {
+          #{$offset}: $next;
+        } @else if index($offsets, $next) {
+          #{$offset}: 0;
+        }
+      }
+    }
+  }
+}
+
+// Function checking if $value is a valid length
+// ---
+// @param [literal] $value: value to test
+// ---
+// @return [bool]
+
+@function is-valid-length($value) {
+  @return (index(top right bottom left, $value) == null)
+}
+
+// Shorthands
+// ---
+
+@mixin absolute($args: ()) {
+  @include position(absolute, $args);
+}
+
+@mixin fixed($args: ()) {
+  @include position(fixed, $args);
+}
+
+@mixin relative($args: ()) {
+  @include position(relative, $args);
+}
+
+@mixin offset-absolute($args: ()) {
+  @include offset(absolute, $args);
+}
+
+@mixin offset-fixed($args: ()) {
+  @include offset(fixed, $args);
+}
+
+@mixin offset-relative($args: ()) {
+  @include offset(relative, $args);
+}
