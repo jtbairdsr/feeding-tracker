@@ -1,0 +1,59 @@
+{
+  "exclude": [
+    "^(node_modules|bower_components|\\.imdone|target|build|dist|logs)[\\/\\\\]?|\\.(git|svn|hg|npmignore)|\\~$|\\.(jpg|png|gif|swp|ttf|otf)$"
+  ],
+  "watcher": true,
+  "keepEmptyPriority": true,
+  "code": {
+    "include_lists": [
+      "TODO",
+      "DOING",
+      "DONE",
+      "PLANNING",
+      "FIXME",
+      "ARCHIVE",
+      "HACK",
+      "CHANGED",
+      "XXX",
+      "IDEA",
+      "NOTE",
+      "REVIEW",
+      "PLANNED"
+    ]
+  },
+  "lists": [
+    {
+      "name": "NOTE",
+      "hidden": true
+    },
+    {
+      "name": "TODO",
+      "hidden": false
+    },
+    {
+      "name": "READY",
+      "hidden": false
+    },
+    {
+      "name": "DOING",
+      "hidden": false
+    },
+    {
+      "name": "DONE",
+      "hidden": false
+    }
+  ],
+  "marked": {
+    "gfm": true,
+    "tables": true,
+    "breaks": false,
+    "pedantic": false,
+    "smartLists": true,
+    "langPrefix": "language-"
+  },
+  "sync": {
+    "id": "58f195428f8c6575de8ca20a",
+    "name": "feeding-tracker",
+    "useImdoneioForPriority": true
+  }
+}

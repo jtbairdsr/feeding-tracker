@@ -43,7 +43,7 @@ export class SocketService {
 	 * cb: callback function, will be invoked after redux dispatch
 	 * bcb: beforeCallback function, will be invoked before redux dispatch
 	 * dpDelay: dispatch delay, give dp time until dispatch is called
-	 *    NOTE: bcb will be called immidiately, dispatch will wait dp to execute
+	 *    NOTE:0 bcb will be called immidiately, dispatch will wait dp to execute id:0
 	 */
 	syncUpdates(modelName: string, array: any, stateArray: Array < string > , cb ? , bcb ? , dpDelay ? : number) {
 		/**
