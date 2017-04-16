@@ -15,7 +15,8 @@
       "user-profile": [],
       "shared": [],
       "feeding": [
-        "oral"
+        "oral",
+        "gavage"
       ]
     },
     "newStoreImports": [],

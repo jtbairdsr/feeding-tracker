@@ -1,8 +1,7 @@
-import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
-
-import { Observable } from 'rxjs/Rx';
-import * as moment    from 'moment';
-import { Router }     from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Observable }        from 'rxjs/Rx';
+import * as moment           from 'moment';
+import { Router }            from '@angular/router';
 
 @Component({
 	selector: 'oral',
@@ -13,10 +12,7 @@ export class OralComponent implements OnInit {
 	public feeding: any;
 	public timer: Observable<string>;
 
-	constructor(
-		private router: Router
-		// private ref: ChangeDetectorRef
-	) { }
+	constructor(private router: Router) { }
 
 	ngOnInit() {
 		// TODO: use the feeding id on the URL to get the correct feeding from the server

@@ -1,0 +1,30 @@
+<md-checkbox [(ngModel)]="pump">Pump</md-checkbox>
+<div class="pump-settings" *ngIf="pump">
+	<md-input-container>
+		<input mdInput placeholder="Start Volume (mL)" type="number" [(ngModel)]="feeding.gavage.startVolume">
+	</md-input-container>
+	<md-input-container>
+		<input mdInput placeholder="Rate (mL/hr)" type="number" [(ngModel)]="feeding.gavage.rate" (change)="estimateTime()">
+	</md-input-container>
+</div>
+<div class="gavage-settings">
+	<div class="volume-needed">
+		<span>Volume needed:</span>
+		<span>{{volumeNeeded}}</span>
+	</div>
+	<div class="prune-juice-container">
+		<md-checkbox class="prune-juice" [(ngModel)]="prunes" labelPosition="before" *ngIf="feeding.prune.administered">Prune Juice ({{feeding.prune.volume}})</md-checkbox>
+		<small *ngIf="pump">add to bag after priming</small>
+	</div>
+</div>
+<div class="pump-details" *ngIf="pump">
+	<div class="bag">
+		<span>Add to bag:</span>
+		<span>{{volumeNeeded + primerVolume}}</span>
+	</div>
+	<div class="time-estimate">
+		<span>End time:</span>
+		<span>{{timeEstimate}}</span>
+	</div>
+</div>
+<button [disabled]="(feeding.prune.administered && !prunes) || (pump && (!feeding.gavage.rate || !feeding.gavage.startVolume))" (click)="start()" md-raised-button color="accent">{{pump ? 'Start' : 'Done'}}</button>

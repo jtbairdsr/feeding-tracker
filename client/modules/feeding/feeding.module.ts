@@ -4,13 +4,14 @@ import { FeedingRoutingModule } from './feeding-routing.module';
 import { MomentModule }         from 'angular2-moment';
 
 // import your submodules below
-import { OralModule }     from './oral/oral.module';
+import { OralModule }           from './oral/oral.module';
+import { GavageModule }         from './gavage/gavage.module';
 
 // import your components below
-import { FeedingComponent } from './feeding.component';
+import { FeedingComponent }     from './feeding.component';
 
 @NgModule({
-	imports: [SharedModule, FeedingRoutingModule, MomentModule, OralModule],
+	imports: [SharedModule, FeedingRoutingModule, MomentModule, OralModule, GavageModule],
 	declarations: [
 		// List your components here
 		FeedingComponent
