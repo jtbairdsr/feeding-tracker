@@ -218,3 +218,6 @@ button.zoom-out span.md-button-wrapper {
 * End Reset browser default
 --------------------------------------------------------------------------
 */
+.cdk-overlay-container {
+	z-index: 10001;
+}

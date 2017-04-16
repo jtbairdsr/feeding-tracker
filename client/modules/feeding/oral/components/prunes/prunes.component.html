@@ -1,0 +1,19 @@
+<md-select placeholder="Volume Administered (mL)" [(ngModel)]="feeding.prune.volume">
+	<md-option *ngFor="let ml of mls" [value]="ml.value">
+		{{ml.label}}
+	</md-option>
+</md-select>
+<div class="details-container">
+	<div class="recommended-dose">
+		<span>Daily dose:</span>
+		<span>{{recommendedDose}} mL</span>
+	</div>
+	<div class="day-total">
+		<span>Current total:</span>
+		<span>{{dayTotal}} mL</span>
+	</div>
+</div>
+<div class="button-container">
+	<button (click)="cancel()" md-raised-button color="primary">Cancel</button>
+	<button (click)="add()" md-raised-button color="accent" [disabled]="!feeding.prune.volume">Add to Feeding</button>
+</div>

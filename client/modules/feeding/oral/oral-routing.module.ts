@@ -3,6 +3,7 @@ import { RouterModule }    from '@angular/router';
 
 import { OralComponent }   from './oral.component';
 import { WrapUpComponent } from './components/wrap-up/wrap-up.component';
+import { PrunesComponent } from './components/prunes/prunes.component';
 
 @NgModule({
 	imports: [RouterModule.forChild([
@@ -13,6 +14,10 @@ import { WrapUpComponent } from './components/wrap-up/wrap-up.component';
 		{
 			path: 'feeding/oral/:feedingId/wrap-up',
 			component: WrapUpComponent
+		},
+		{
+			path: 'feeding/oral/:feedingId/prunes',
+			component: PrunesComponent
 		}
 	])],
 	exports: [RouterModule]
