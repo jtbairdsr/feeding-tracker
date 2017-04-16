@@ -42,6 +42,11 @@ export const routes: Routes = [
 		redirectTo: '/feeding/gavage/:feedingId',
 		pathMatch: 'full'
 	},
+	{
+		path: 'feeding/gavage/:feedingId/finish',
+		redirectTo: '/feeding/gavage/:feedingId/finish',
+		pathMatch: 'full'
+	},
 	// Not Found Path -------------------------------------------------------------
 	{
 		path: '**',

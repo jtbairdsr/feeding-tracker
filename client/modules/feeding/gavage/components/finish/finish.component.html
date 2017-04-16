@@ -1,0 +1,14 @@
+<md-input-container>
+	<input mdInput placeholder="End Volume (mL)" type="number" [(ngModel)]="feeding.gavage.endVolume" (change)="updateTotal()">
+</md-input-container>
+<div class="details">
+	<div class="goal-volume">
+		<span>Volume needed:</span>
+		<span>{{volumeNeeded}} mL</span>
+	</div>
+	<div class="pumped-volume">
+		<span>Volume pumped:</span>
+		<span>{{pumpedVolume}}</span>
+	</div>
+</div>
+<button [disabled]="!feeding.gavage.endVolume" (click)="finish()" md-raised-button color="accent">Done</button>
